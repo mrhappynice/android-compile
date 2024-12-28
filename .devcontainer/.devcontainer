@@ -1,8 +1,6 @@
 {
-  "name": "ARM Android DevContainer",
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
+  "name": "Cross-Compile for ARM",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:0-bullseye",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -14,5 +12,5 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "remoteUser": "vscode"
+  "postCreateCommand": "apt-get update && apt-get install -y gcc-arm-linux-gnueabi"
 }
