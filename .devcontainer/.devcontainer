@@ -12,5 +12,5 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "apt-get update && apt-get install -y gcc-arm-linux-gnueabi"
+  "postCreateCommand": "sudo apt-get update && apt-get install -y gcc-arm-linux-gnueabi"
 }
