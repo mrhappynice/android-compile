@@ -11,12 +11,12 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Download and install Android NDK
-ENV ANDROID_NDK_VERSION r23b
+ENV ANDROID_NDK_VERSION r27c
 RUN curl -sSL https://dl.google.com/android/repository/android-ndk-${ANDROID_NDK_VERSION}-linux.zip -o /tmp/ndk.zip \
     && unzip /tmp/ndk.zip -d /usr/local/ \
-    && rm /tmp/ndk.zip
-ENV ANDROID_NDK_HOME=/usr/local/android-ndk-${ANDROID_NDK_VERSION}
-ENV PATH=${ANDROID_NDK_HOME}/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
+    && rm /tmp/ndk.zip \
+    && echo 'export ANDROID_NDK_HOME=/usr/local/android-ndk-${ANDROID_NDK_VERSION}' >> /etc/profile \
+    && echo 'export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH' >> /etc/profile
 
 # Setup a non-root user (vscode) with passwordless sudo
 ARG USERNAME=vscode
