@@ -1,5 +1,14 @@
 ### Instructions:
 
+- **Download and extract NDK:**
+```bash
+chmod +x ndk-setup.sh
+```
+```bash
+./ndk-setup.sh
+```
+
+
 - **Set the Environment Variables:**
    - Set the `ANDROID_NDK_HOME` environment variable to the path of the extracted NDK. Add this to your shell profile to persist across sessions:
 
