@@ -12,5 +12,5 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "postCreateCommand": "apt-get update && apt-get install -y wget tar && wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz && tar -xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz -C /opt && ln -s /opt/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/* /usr/local/bin/"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y wget tar && wget https://releases.linaro.org/components/toolchain/binaries/latest-7/arm-linux-gnueabihf/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz && sudo tar -xf gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf.tar.xz -C /opt && sudo ln -s /opt/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/* /usr/local/bin/"
 }
