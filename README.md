@@ -27,12 +27,4 @@ source ~/.bashrc
 $ANDROID_NDK_HOME/ndk-build --version
 ```
 
-- **Verify the Setup in the New Codespace:**
-   - Open a terminal in your Codespace.
-   - Run the following command to ensure everything is set up correctly:
-
-```bash
-$ANDROID_NDK_HOME/ndk-build --version
-```
-
 You should now have a fully functional development environment in your GitHub Codespace, with the Android NDK properly installed and configured.
